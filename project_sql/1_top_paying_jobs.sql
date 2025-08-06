@@ -19,9 +19,9 @@ FROM
 LEFT JOIN
     company_dim AS cd ON jp.company_id = cd.company_id
 WHERE
-    jp.job_title_short LIKE '%Data%Analyst%' AND
-    jp.job_work_from_home = TRUE AND
-    jp.salary_year_avg IS NOT NULL
+    jp.job_title_short LIKE '%Data%Analyst%'
+    AND jp.job_work_from_home = TRUE
+    AND jp.salary_year_avg IS NOT NULL
 ORDER BY
     "Annual Salary" DESC
 LIMIT 10;

@@ -20,8 +20,8 @@ INNER JOIN
 INNER JOIN
     skills_dim AS sd ON sjd.skill_id = sd.skill_id
 WHERE
-    jp.job_title_short = 'Data Analyst' AND
-    jp.job_work_from_home = True
+    jp.job_title_short = 'Data Analyst'
+    AND jp.job_work_from_home = True
 GROUP BY
     jp.job_title_short,
     skill_name

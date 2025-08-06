@@ -5,7 +5,6 @@ Question: What are the top skills based on salary?
 - Why?
 It reveals how different skills impact salary levels for Data Analysts and helps identify the most financially rewarding skills to acquire or improve
 */
-COPY (
 
 SELECT
     sd.skills AS skill_name,
@@ -26,9 +25,7 @@ GROUP BY
     remote_job
 ORDER BY
     avg_salary DESC
-LIMIT 25
-
-) TO 'D:\Z1. Data Science Career\2. PostgreSQL\1. Training & Projects\SQL_Project_Data_Job_Analysis\query_results\4_top_paying_skills.csv' WITH CSV HEADER;
+LIMIT 25;
 
 /*
 Main takeawys from ChatGPT
