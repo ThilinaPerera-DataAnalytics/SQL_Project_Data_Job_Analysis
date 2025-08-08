@@ -17,11 +17,10 @@ WITH top_paying_jobs AS (
         company_dim AS cd ON jp.company_id = cd.company_id
     WHERE
         jp.job_title_short = 'Data Analyst'
-        AND jp.job_work_from_home = TRUE
         AND jp.salary_year_avg IS NOT NULL
     ORDER BY
         annual_salary DESC
-    LIMIT 10
+    LIMIT 20
 )
 
 SELECT
@@ -37,13 +36,6 @@ ORDER BY
     annual_salary DESC;
 
 /*
-Takeaways:
-    SQL and Python are must-haves — no surprise there.
-    Tableau still holds weight for dashboarding in high-paying roles.
-    R, Snowflake, and Pandas follow — solid adds for analytical depth.
-    Excel refuses to die. It’s still relevant even in top roles.
-    Cloud & DevOps-adjacent tools (Azure, Bitbucket, Go) are creeping in.
-
 [
   {
     "job_id": 552322,

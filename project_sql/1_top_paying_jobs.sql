@@ -7,21 +7,20 @@ Question: What are the top-paying data analyst jobs?
 */
 
 SELECT
-    jp.job_id AS "JOB ID",
-    cd.name AS "Company Name",
-    jp.job_title AS "Jobs Type",
-    jp.job_location AS " Location",
-    jp.job_schedule_type AS "Job Schedule",
-    jp.salary_year_avg AS "Annual Salary",
-    jp.job_posted_date AS "Posted Date"
+    jp.job_id,
+    cd.name AS company_name,
+    jp.job_title,
+    jp.job_location,
+    jp.job_schedule_type,
+    ROUND(jp.salary_year_avg, 2) AS annual_salary,
+    jp.job_posted_date
 FROM
     job_postings_fact as jp
 LEFT JOIN
     company_dim AS cd ON jp.company_id = cd.company_id
 WHERE
-    jp.job_title_short LIKE '%Data%Analyst%'
-    AND jp.job_work_from_home = TRUE
+    jp.job_title_short LIKE 'Data Analyst'
     AND jp.salary_year_avg IS NOT NULL
 ORDER BY
-    "Annual Salary" DESC
-LIMIT 10;
+    annual_salary DESC
+LIMIT 15;

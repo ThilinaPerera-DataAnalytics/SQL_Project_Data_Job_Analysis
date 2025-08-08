@@ -8,7 +8,6 @@ It reveals how different skills impact salary levels for Data Analysts and helps
 
 SELECT
     sd.skills AS skill_name,
-    jp.job_work_from_home AS remote_job,
     ROUND(AVG(jp.salary_year_avg), 2) AS avg_salary
 FROM
     job_postings_fact AS jp
@@ -19,33 +18,13 @@ INNER JOIN
 WHERE
     jp.job_title_short = 'Data Analyst'
     AND jp.salary_year_avg IS NOT NULL
-    AND jp.job_work_from_home = True
 GROUP BY
-    skill_name,
-    remote_job
+    skill_name
 ORDER BY
     avg_salary DESC
-LIMIT 25;
+LIMIT 20;
 
 /*
-Main takeawys from ChatGPT
-🔥 Big Data & ETL tools
-- Top $$$: PySpark, Databricks, Airflow, and Datarobot dominate the top salaries.
-- Remote data analysts are expected to build scalable data pipelines, not just crunch spreadsheets.
-
-💻 Data + DevOps is the new combo:
-- Tools like Bitbucket, GitLab, Jenkins, and Atlassian are showing up strong.
-- Version control and CI/CD are now part of a data analyst's skillset in modern teams.
-
-🧠 ML & Python stack is baseline now:
-- Pandas, NumPy, Scikit-learn, Jupyter.
-- If you're not fluent in this ecosystem, you're already behind.
-- Companies want analysts who can build and deploy models, not just visualize trends.
-
-☁️ Cloud-native + backend tools matter:
-- GCP, PostgreSQL, Couchbase, Golang, even Swift.
-- Remote data work is bleeding into data engineering.
-- Knowing how to work with cloud infra and backend data APIs = high-value skill set.
 
 [
   {

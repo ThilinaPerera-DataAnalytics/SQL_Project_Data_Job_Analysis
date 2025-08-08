@@ -70,10 +70,10 @@ LIMIT 25;
 -- as a concise query
 
 SELECT
-    sd.skill_id AS "Skill ID",
-    sd.skills AS "Skill Name",
-    COUNT(sjd.job_id) AS "Demand Count", -- Or can use COUNT(jp.job_id)
-    ROUND(AVG(jp.salary_year_avg), 2) AS "Average Annual Salary"
+    sd.skill_id,
+    sd.skills AS skill_name,
+    COUNT(sjd.job_id) AS demand_count, -- Or can use COUNT(jp.job_id)
+    ROUND(AVG(jp.salary_year_avg), 2) AS annual_average_salary
 FROM
     job_postings_fact AS jp
 INNER JOIN
@@ -82,15 +82,14 @@ INNER JOIN
     skills_dim AS sd ON sjd.skill_id = sd.skill_id
 WHERE
     jp.job_title_short = 'Data Analyst'
-    AND jp.job_work_from_home = TRUE
     AND jp.salary_year_avg IS NOT NULL
 GROUP BY
-    "Skill ID",
-    "Skill Name"
+    sd.skill_id,
+    skill_name
 HAVING
     COUNT(sjd.job_id) > 10 -- Aggregations not allowed in WHERE atatement
 ORDER BY
-    "Average Annual Salary" DESC,
-    "Demand Count" DESC
-LIMIT 25;
+    annual_average_salary DESC,
+    demand_count DESC
+LIMIT 20;
  
