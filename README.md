@@ -94,6 +94,7 @@ This project showcases a variety of intermediate-to-advanced SQL techniques to e
 
 These techniques mirror real-world analytics workflows and demonstrate readiness for SQL-heavy analyst roles.
 
+[<font size="5">**If You want to interact with the full Power BI Dashborad, Just Click here**</font>](https://app.powerbi.com/view?r=eyJrIjoiZmEyODRlYTYtZDM2My00MTJkLWIxODItOWRlZjYxYjc5N2VhIiwidCI6ImM0ZGRhYWFjLTQ4OWItNGQ1Zi1hMzVjLWFhODVlNmVkZjhkOCJ9)
 
 <font size="4">1. 💸 Top Paying Data Analyst Jobs</font>
 
@@ -169,12 +170,11 @@ ORDER BY
 
 
 <font size="3">🔍 Insights</font>
-- **Python & SQL** lead with the highest, appearing as top skills across high-paying listings.
-- **Tableau** is prominent for dashboarding, with **Power BI** following closely, indicating a strong demand in tech+biz roles.
-- **R** and **Snowflake** offer competitive salaries, valuable for statistical modeling and big data.
-- **Excel** remains relevant, serving as a support/validation tool in top-paying listings.
-- **Oracle** stands out, suggesting premium value in certain roles.
-- Cloud & DevOps influence is evident with tools like **Git, Kafka, SVN, and Airflow**, reflecting a growing need for hybrid skill sets.
+- **Git, Kafka, Linux, Oracle, and SVN** lead with the highest average annual salary, indicating strong demand in version control, data streaming, and database management.
+- **Airflow, Excel, Matlab, Power BI, Python, R, SAS, Spark, SQL, Tableau, VBA, and Word** follow with a consistent salary, showcasing a broad range of valuable skills across coding, data analysis, and business intelligence.
+- **BigQuery, Looker, and Snowflake** are at the lower end, suggesting niche but still significant roles in big data and visualization.
+- The top-tier skills (400K) are concentrated in DevOps and traditional database categories, while the 375K range spans multiple domains including **machine learning, statistics, and office tools**.
+- The salary distribution shows a clear tiering, with a significant drop from 400K to 350K, highlighting the premium on certain specialized tools.
 
 If someone is looking to prioritize skill-building, better to start with SQL and Python, then stack dashboarding, statistical, and cloud skills for maximum payoff.
 
@@ -314,7 +314,6 @@ LIMIT 20;
 4. Execute main queries: `psql -f sql/<project_name>.sql`
 5. Review outputs under `outputs/result_snapshots/` (.csv or .png snapshots).
 
-[<font size="5">** If You want to interact with the full Power BI Dashborad, Just Click here**</font>](https://app.powerbi.com/view?r=eyJrIjoiZmEyODRlYTYtZDM2My00MTJkLWIxODItOWRlZjYxYjc5N2VhIiwidCI6ImM0ZGRhYWFjLTQ4OWItNGQ1Zi1hMzVjLWFhODVlNmVkZjhkOCJ9)
 
 # 📬 Credits & Contact
 📁 **Data Source:**  
