@@ -1,5 +1,6 @@
-# 📊 Data Job Analysis with SQL - Introduction
+# 📊 Data Job Analysis with SQL
 
+![alt tesxt](cover_photo.png)
 This project explores the job market through the lens of SQL, diving into real-world data to extract trends, correlations, and high-impact insights in the Data industry (2023).
 
 It focuses on:
